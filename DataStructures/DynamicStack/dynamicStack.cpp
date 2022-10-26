@@ -7,8 +7,8 @@ class Stack
 {
 private:
     T* m_data{};
-    size_t m_capacity{};
-    size_t m_size{};
+    int m_capacity{};
+    int m_size{};
 
     void resize(int capacity)
     {
@@ -136,7 +136,7 @@ public:
 
 int main()
 {
-
+    //fix the iterator
 }
 
 
