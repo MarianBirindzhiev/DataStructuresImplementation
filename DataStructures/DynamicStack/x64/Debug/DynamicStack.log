@@ -1,2 +1,25 @@
 ﻿  dynamicStack.cpp
-  DynamicStack.vcxproj -> D:\Programs\VisualStudio\DataStructuresImplementations\DataStructures\x64\Debug\DynamicStack.exe
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\DynamicStack\dynamicStack.cpp(117,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\DynamicStack\dynamicStack.cpp(112): message : while compiling class template member function 'T Stack<T>::peek(void)'
+          with
+          [
+              T=int
+          ]
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\DynamicStack\dynamicStack.cpp(146): message : see reference to function template instantiation 'T Stack<T>::peek(void)' being compiled
+          with
+          [
+              T=int
+          ]
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\DynamicStack\dynamicStack.cpp(140): message : see reference to class template instantiation 'Stack<int>' being compiled
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\DynamicStack\dynamicStack.cpp(96,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\DynamicStack\dynamicStack.cpp(93): message : while compiling class template member function 'void Stack<int>::push(const T &)'
+          with
+          [
+              T=int
+          ]
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\DynamicStack\dynamicStack.cpp(143): message : see reference to function template instantiation 'void Stack<int>::push(const T &)' being compiled
+          with
+          [
+              T=int
+          ]
+  DynamicStack.vcxproj -> D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\x64\Debug\DynamicStack.exe

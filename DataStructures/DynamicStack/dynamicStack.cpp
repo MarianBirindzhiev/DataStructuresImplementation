@@ -7,8 +7,8 @@ class Stack
 {
 private:
     T* m_data{};
-    int m_capacity{};
-    int m_size{};
+    size_t m_capacity{};
+    size_t m_size{};
 
     void resize(int capacity)
     {
@@ -20,6 +20,17 @@ private:
         delete[] m_data;
         m_data = temp;
         m_capacity = capacity;
+    }
+
+    void copy(const Stack& copy)
+    {
+        m_capacity = copy.m_capacity;
+        m_size = copy.m_size;
+        m_data = new T[m_capacity];
+        for (size_t i = 0; i < m_size; i++)
+        {
+            m_data[i] = copy.m_data[i];
+        }
     }
 
     class Iterator
@@ -57,9 +68,24 @@ public:
         m_data = new T[m_capacity];
         m_size = 0;
     }
+    Stack(const Stack& other)
+    {
+        copy(other);
+
+    }
     ~Stack()
     {
         delete[] m_data;
+    }
+
+    Stack& operator=(const Stack& other)
+    {
+        if (this!=&other)
+        {
+            delete[] m_data;
+            copy(other);
+        }
+        return *this;
     }
 
     void push(const T& item)
