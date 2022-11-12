@@ -101,6 +101,22 @@ public:
         }   
         return m_data[m_frontElement];
     }
+    T& getAt(size_t index)
+    {
+        if (index > m_size)
+        {
+            throw std::out_of_range("index out of range");
+        }
+        return m_data[index];
+    }
+    void setAt(size_t index, const T& value)
+    {
+        if (index > m_size)
+        {
+            throw std::out_of_range("index out of range");
+        }
+        m_data[index] = value;
+    }
 
     bool isEmpty()
     {
@@ -114,6 +130,50 @@ public:
     {
         return m_size == m_capacity;
     }
+       public:
+           class Iterator
+           {
+           private:
+               dynamicQueue* m_array;
+               size_t m_index;
+           public:
+               Iterator(dynamicQueue* iterator_array)
+                   :m_array(iterator_array),
+                   m_index(0)
+               {}
+
+               T& getCurrent() const
+               {
+                   return m_array->getAt(m_index);
+               }
+
+               void setCurrent(const T& value)
+               {
+                   m_array->setAt(m_index, value);
+               }
+
+               void moveNext()
+               {
+                   if (m_index < m_array->size())
+                   {
+                       ++m_index;
+                   }
+               }
+
+               void rewind()
+               {
+                   m_index = 0;
+               }
+
+               bool end() const
+               {
+                   return m_index == m_array->size();
+               }
+           };
+           Iterator getIterator()
+           {
+               return Iterator(this);
+           }
 };
 
 int main()
