@@ -3,13 +3,16 @@
 #include <string>
 #include <utility>
 
-
+struct TreeNode;
 template<typename T>
 class BinarySearchTree
 {
 public:
     BinarySearchTree()
         :root{ nullptr } {};
+
+    BinarySearchTree(const T& rootValue)
+        :root{ rootValue } {}
 
     BinarySearchTree(const BinarySearchTree& other)
         :root{ nullptr }
@@ -38,25 +41,44 @@ public:
     {
         clear(root);
     }
+    void invert()
+    {
+        invert(root);
+    }
+    void printTree(TreeNode* node)
+    {
+        if (node)
+        {
+            printTree(node->left);
+            std::cout << node->element << ' ';
+            printTree(node->right);
+        }
+    }
 
 private:
 
-    struct BinaryNode
+    struct TreeNode
     {
         T element;
-        BinaryNode* left;
-        BinaryNode* right;
+        TreeNode* left;
+        TreeNode* right;
 
-        BinaryNode(const T& element, BinaryNode* left, BinaryNode* right)
+        TreeNode(const T& element)
+            :element{ element }, left{ nullptr }, right{ nullptr } {};
+
+        TreeNode(const T&& element)
+            :element{ std::move(element) }, left{ nullptr }, right{ nullptr } {};
+
+        TreeNode(const T& element, TreeNode* left, TreeNode* right)
             :element{ element }, left{ left }, right{ right } {}
 
-        BinaryNode(const T&& element, BinaryNode* left, BinaryNode* right)
+        TreeNode(const T&& element, TreeNode* left, TreeNode* right)
             :element{ std::move(element) }, left{ left }, right{ right } {}
     };
 
-    BinaryNode* root;
+    TreeNode* root;
 
-    bool contains(const T& key, BinaryNode* node)
+    bool contains(const T& key, TreeNode* node)
     {
         if (!node)
             return false;
@@ -70,7 +92,7 @@ private:
             return true;
     }
 
-    BinaryNode* findMin(BinaryNode* node)
+    TreeNode* findMin(TreeNode* node)
     {
         if (!node)
             return nullptr;
@@ -80,7 +102,7 @@ private:
         return findMin(node->left);
     }
 
-    BinaryNode* findMax(BinaryNode* node)
+    TreeNode* findMax(TreeNode* node)
     {
         if (!node)
             return nullptr;
@@ -90,26 +112,26 @@ private:
         return findMax(node->right);
     }
 
-    void insert(const T& value, BinaryNode*& node)
+    void insert(const T& value, TreeNode*& node)
     {
         if (!node)
-            node = new BinaryNode{ value,nullptr,nullptr };
+            node = new TreeNode{ value };
         if (node->element > value)
             insert(value, node->left);
         if (node->element < value)
             insert(value, node->right);
     }
-    void insert(const T&& value, BinaryNode*& node)
+    void insert(const T&& value, TreeNode*& node)
     {
         if (!node)
-            node = new BinaryNode{ std::move(value),nullptr,nullptr};
+            node = new TreeNode{ std::move(value) };
         if (node->element > value)
             insert(value, node->left);
         if (node->element < value)
             insert(value, node->right);
     }
 
-    void remove(const T& value, BinaryNode*& node)
+    void remove(const T& value, TreeNode*& node)
     {
         if (!node)
             return;
@@ -125,7 +147,7 @@ private:
         }
         else
         {
-            BinaryNode* oldNode = node;
+            TreeNode* oldNode = node;
 
             if (node->left!=nullptr)
             {
@@ -138,7 +160,7 @@ private:
             delete oldNode;
         }
     }
-    void clear(BinaryNode*& node)
+    void clear(TreeNode*& node)
     {
         if (node!=nullptr)
         {
@@ -148,19 +170,48 @@ private:
         }
         node = nullptr;
     }
-    BinaryNode* clone(const BinaryNode* node) const
+    TreeNode* clone(const TreeNode* node) const
     {
         if (!node)
             return nullptr;
         
-        return new BinaryNode{ node->element,node->left,node->right };
+        return new TreeNode{ node->element,node->left,node->right };
+    }
+    TreeNode* invert(TreeNode*& node)
+    {
+        if (!node)
+            return node;
+
+        if (!node->left && !node->right)
+            return node;
+        else
+            std::swap(node->left, node->right);
+
+        invert(node->left);
+        invert(node->right);
+
+        return node;
+    }
+
+    void printTree(TreeNode* node)
+    {
+        if (node)
+        {
+            printTree(node->left);
+            std::cout << node->element << ' ';
+            printTree(node->right);
+        }
     }
 };
 
 
 int main()
 {
-
+    BinarySearchTree<int> t{ 10 };
+    t.insert(12);
+    t.insert(10);
+    t.insert(6);
+    t.insert(8);
 }
 
 

@@ -1,2 +1,12 @@
 ﻿  binarySearchTree.cpp
-  BinarySearchTree.vcxproj -> D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\x64\Debug\BinarySearchTree.exe
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(52,29): error C2027: use of undefined type 'TreeNode'
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(6,8): message : see declaration of 'TreeNode'
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(205,2): message : see reference to class template instantiation 'BinarySearchTree<T>' being compiled
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(205,1): error C2027: use of undefined type 'TreeNode'
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(6,8): message : see declaration of 'TreeNode'
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(53,32): error C2027: use of undefined type 'TreeNode'
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(6,8): message : see declaration of 'TreeNode'
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(54,29): error C2027: use of undefined type 'TreeNode'
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(6,8): message : see declaration of 'TreeNode'
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(215,6): error C2661: 'BinarySearchTree<int>::printTree': no overloaded function takes 0 arguments
+D:\Programs\VisualStudio\DataStructuresImplementation\DataStructures\BinarySearchTree\binarySearchTree.cpp(215,6): message : while trying to match the argument list '()'
