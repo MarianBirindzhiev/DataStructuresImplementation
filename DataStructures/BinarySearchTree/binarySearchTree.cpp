@@ -212,6 +212,7 @@ int main()
     t.insert(10);
     t.insert(6);
     t.insert(8);
+    
 }
 
 

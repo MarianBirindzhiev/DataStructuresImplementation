@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySearchTree", "BinaryS
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVLTree", "AVLTree\AVLTree.vcxproj", "{82412288-1A80-469C-BE71-250DF6E84F5E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedList", "LinkedList\LinkedList.vcxproj", "{62DE1A4E-B152-41C1-B714-F76FB43223CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{82412288-1A80-469C-BE71-250DF6E84F5E}.Release|x64.Build.0 = Release|x64
 		{82412288-1A80-469C-BE71-250DF6E84F5E}.Release|x86.ActiveCfg = Release|Win32
 		{82412288-1A80-469C-BE71-250DF6E84F5E}.Release|x86.Build.0 = Release|Win32
+		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Debug|x64.ActiveCfg = Debug|x64
+		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Debug|x64.Build.0 = Debug|x64
+		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Debug|x86.ActiveCfg = Debug|Win32
+		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Debug|x86.Build.0 = Debug|Win32
+		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Release|x64.ActiveCfg = Release|x64
+		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Release|x64.Build.0 = Release|x64
+		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Release|x86.ActiveCfg = Release|Win32
+		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
