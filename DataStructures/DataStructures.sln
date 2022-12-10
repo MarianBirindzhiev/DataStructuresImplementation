@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVLTree", "AVLTree\AVLTree.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedList", "LinkedList\LinkedList.vcxproj", "{62DE1A4E-B152-41C1-B714-F76FB43223CA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DoubleLinkedList", "DoubleLinkedList\DoubleLinkedList.vcxproj", "{992DC866-1960-4AA3-A418-B7E8ECEB268A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Release|x64.Build.0 = Release|x64
 		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Release|x86.ActiveCfg = Release|Win32
 		{62DE1A4E-B152-41C1-B714-F76FB43223CA}.Release|x86.Build.0 = Release|Win32
+		{992DC866-1960-4AA3-A418-B7E8ECEB268A}.Debug|x64.ActiveCfg = Debug|x64
+		{992DC866-1960-4AA3-A418-B7E8ECEB268A}.Debug|x64.Build.0 = Debug|x64
+		{992DC866-1960-4AA3-A418-B7E8ECEB268A}.Debug|x86.ActiveCfg = Debug|Win32
+		{992DC866-1960-4AA3-A418-B7E8ECEB268A}.Debug|x86.Build.0 = Debug|Win32
+		{992DC866-1960-4AA3-A418-B7E8ECEB268A}.Release|x64.ActiveCfg = Release|x64
+		{992DC866-1960-4AA3-A418-B7E8ECEB268A}.Release|x64.Build.0 = Release|x64
+		{992DC866-1960-4AA3-A418-B7E8ECEB268A}.Release|x86.ActiveCfg = Release|Win32
+		{992DC866-1960-4AA3-A418-B7E8ECEB268A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
